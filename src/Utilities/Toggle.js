@@ -1,13 +1,15 @@
 import { Component } from 'react';
 
+/* eslint-disable */
+
 export default class Toggle extends Component {
   state = {
-    show: false
+    show: false,
   };
 
   flip = () => {
     this.setState({
-      show: !this.state.show
+      show: !this.state.show,
     });
   };
 
@@ -17,7 +19,7 @@ export default class Toggle extends Component {
     return children({
       // this.state.show and this.flip are being passed in as properties in an object
       on: this.state.show,
-      toggle: this.flip
+      toggle: this.flip,
     });
 
     /* // the prop render is an arrow function that is passing the argument 'hi'
